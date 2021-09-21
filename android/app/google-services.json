@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "435887477219",
+    "project_id": "movie-app-lucascarlosj",
+    "storage_bucket": "movie-app-lucascarlosj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435887477219:android:9de2ff64137f09602d50d6",
+        "android_client_info": {
+          "package_name": "br.com.lucascarlosj.app_movie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435887477219-me1mdelj7bnf5fra34v6oqjmj7hnvl2h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.lucascarlosj.app_movie",
+            "certificate_hash": "85c1386e2a9322cf72a95d57d6a0a906fa957d99"
+          }
+        },
+        {
+          "client_id": "435887477219-6qbqkfhuffjjp66jsde4e1jegkbdn8vg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3T1L-aK92f5aSfT8oSF17-zpllg-Gavw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435887477219-6qbqkfhuffjjp66jsde4e1jegkbdn8vg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
