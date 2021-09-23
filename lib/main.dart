@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: MovieAppUiConfig.title,
       initialBinding: ApllicationBindings(),
       theme: MovieAppUiConfig.theme,
