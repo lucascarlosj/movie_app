@@ -1,4 +1,5 @@
 import 'package:app_movie/modules/movies/movies_controller.dart';
+import 'package:app_movie/modules/movies/widgets/movie_header_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +12,7 @@ class MoviesHeader extends GetView<MoviesController> {
       width: Get.width,
       height: 196,
       child: Stack(
-        alignment: Alignment.bottomCenter,
+        alignment: Alignment.topCenter,
         children: [
           SizedBox(
             width: Get.width,
@@ -20,7 +21,9 @@ class MoviesHeader extends GetView<MoviesController> {
               fit: BoxFit.cover,
             ),
           ),
-          Container(
+          MovieHeaderProfile(),
+          SizedBox(height: 20),
+          /* Container(
             width: Get.width * .9,
             padding: EdgeInsets.only(bottom: 20),
             child: TextField(
@@ -37,7 +40,7 @@ class MoviesHeader extends GetView<MoviesController> {
                   contentPadding: EdgeInsets.zero,
                   floatingLabelBehavior: FloatingLabelBehavior.never),
             ),
-          )
+          ) */
         ],
       ),
     );

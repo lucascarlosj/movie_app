@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_list.dart';
 import 'package:flutter_signin_button/button_view.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginPage extends GetView<LoginController> {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
+
+  var checked = false.obs;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,8 @@ class LoginPage extends GetView<LoginController> {
             padding: const EdgeInsets.only(top: 80.0),
             child: Column(
               children: [
-                Image.asset('assets/images/logo.png'),
+                Lottie.asset('assets/images/lottie.json',
+                    height: 200, repeat: false),
                 SizedBox(height: 50),
                 SizedBox(
                   width: Get.width * .9,

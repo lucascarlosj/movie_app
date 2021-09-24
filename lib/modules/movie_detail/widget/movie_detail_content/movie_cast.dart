@@ -18,7 +18,7 @@ class MovieCast extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Image.network(
-              cast?.image ?? '',
+              /* cast?.image ??  */'https://www.cer-cavalos.com/images/not_found.png',
               width: 85,
               height: 85,
               fit: BoxFit.cover,

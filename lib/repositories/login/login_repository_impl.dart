@@ -21,12 +21,19 @@ class LoginRepositoryImpl implements LoginRepository {
 
   @override
   Future<UserCredential> loginFacebook() async {
-    final LoginResult result = await FacebookAuth.instance.login();
+    final LoginResult result = await FacebookAuth.instance.login(
+      permissions: [
+        'public_profile',
+        'email',
+        'pages_show_list',
+        'pages_messaging',
+        'pages_manage_metadata'
+      ],
+    );
     if (result.status == LoginStatus.success) {
-      
       final OAuthCredential credential =
           FacebookAuthProvider.credential(result.accessToken!.token);
-      
+
       return await FirebaseAuth.instance.signInWithCredential(credential);
     }
     return throw Exception('Erro ao realiza o login com o Facebook');
@@ -38,6 +45,4 @@ class LoginRepositoryImpl implements LoginRepository {
     await FacebookAuth.instance.logOut();
     FirebaseAuth.instance.signOut();
   }
-
-  
 }

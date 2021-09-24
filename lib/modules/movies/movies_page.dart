@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MoviesPage extends GetView<MoviesController> {
-  const MoviesPage({Key? key}) : super(key: key);
+  MoviesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

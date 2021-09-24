@@ -10,8 +10,19 @@ class MovieDetailPage extends GetView<MovieDetailController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text('Detalhe'),
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         child: Obx(
@@ -24,7 +35,6 @@ class MovieDetailPage extends GetView<MovieDetailController> {
               MovieDetailContent(
                 movie: controller.movie.value,
               ),
-              
             ],
           ),
         ),

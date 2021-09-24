@@ -7,6 +7,7 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
   final LoginService _loginService;
   final loading = false.obs;
   final message = Rxn<MessageModel>();
+  
 
   LoginController({required LoginService loginService})
       : _loginService = loginService;
