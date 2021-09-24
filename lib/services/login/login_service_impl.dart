@@ -18,6 +18,11 @@ class LoginServiceImpl implements LoginService {
   Future<UserCredential> login() => _loginRepository.login();
 
   @override
+  Future<UserCredential> loginFacebook() => _loginRepository.loginFacebook();
+
+  @override
   Future<void> logout() => _loginRepository.logout();
+
+  
 
 }

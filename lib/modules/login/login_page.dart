@@ -38,6 +38,19 @@ class LoginPage extends GetView<LoginController> {
                     ),
                   ),
                 ),
+                SizedBox(height: 25),
+                SizedBox(
+                  width: Get.width * .9,
+                  height: 42,
+                  child: SignInButton(
+                    Buttons.Facebook,
+                    onPressed: () => controller.loginFacebook(),
+                    text: 'Entrar com o Facebook',
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

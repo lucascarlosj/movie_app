@@ -33,4 +33,20 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
           title: 'Erro', message: 'Erro ao realizar login!'));
     }
   }
+
+  Future<void> loginFacebook() async {
+    try {
+      loading(true);
+      await _loginService.loginFacebook();
+      loading(false);
+      message(MessageModel.info(
+          title: 'Sucesso', message: 'Login realizado com sucesso!'));
+    } catch (e, s) {
+      print(e);
+      print(s);
+      loading(false);
+      message(MessageModel.error(
+          title: 'Erro', message: 'Erro ao realizar login!'));
+    }
+  }
 }
